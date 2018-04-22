@@ -24,10 +24,13 @@ body {
     font-weight: 900;
     font-size: 30px;
     padding: 23px;
-    margin-right: 15px;
+    margin-left: 176px;
 }
 
+.nav,
+.navbar-nav,
 .navbar-right {
+    margin-right: 157px;
     padding: 20px;
 }
 
