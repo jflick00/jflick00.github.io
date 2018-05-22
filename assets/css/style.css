@@ -132,7 +132,7 @@ h3 {
 /* Media Queries */
 /* ------------------------------------------------------------------------- */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 426px) {
 
     h1 {
         text-align: center;
