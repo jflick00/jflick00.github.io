@@ -1,5 +1,14 @@
+/* ------------------------------------------------------------------------- */
+/* General */
+/* ------------------------------------------------------------------------- */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -8,47 +17,7 @@ body {
     line-height: 34px;
     color: #777777;
     background: url("../imgs/cork-wallet.png");
-}
-  
-
-/* header */
-
-.container-fluid {
-    background-color: #ffffff;
-}
-
-.navbar-header {
-    background-color: #4aaaa5;
-    color: #ffffff;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-weight: 900;
-    font-size: 30px;
-    padding: 23px;
-    margin-left: 176px;
-}
-
-.nav,
-.navbar-nav,
-.navbar-right {
-    margin-right: 157px;
-    padding: 20px;
-}
-
-nav a {
-    border-left: 1px solid #cccccc;
-    color: #777777;
-}
-
-
-/* general */
-
-.container {
-    margin-top: 130px;
-    margin-bottom: 150px;
-}
-
-.page-header {
-    border-bottom: 2px solid #dddddd;
+    margin-bottom: 100px; /* Margin bottom by footer height */
 }
 
 h1 {
@@ -56,66 +25,138 @@ h1 {
     font-weight: 900;
     font-size: 30px;
     color: #4aaaa5;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dddddd;
 }
 
-.thumbnail {
-    border: solid 3px #dddddd;
-    padding: 20px 50px;
+hr {
+    margin-bottom: 25px;
+    border-top: 2px solid rgba(82, 82, 103, 0.3);
+}
+  
+/* ------------------------------------------------------------------------- */
+/* Nav Bar */
+/* ------------------------------------------------------------------------- */
+
+.navbar {
+    padding: 0;
 }
 
+.navbar-header {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 30px;
+}
 
-/* main */
+.nav-link {
+    border-left: 1px solid #cccccc;
+    color: rgba(0,0,0,.3);
+}
 
-#picture {
+/* ------------------------------------------------------------------------- */
+/* About */
+/* ------------------------------------------------------------------------- */
+
+.cardMain {
+    margin-top: 25px;
+}
+
+#profilePic {
+    margin: 30px 15px 15px 30px;
     width: 200px;
-    /* float: left; */
-}
-
-/* .caption {
     float: left;
-} */
-
-
-/* footer */
-
-.panel-footer {
-    background-color: #666666;
-    color: #cccccc;
-    text-align: center;
-    margin-bottom: -21px;
-    margin-left: -1px;
-    width: 100%;
-    padding-top: 30px;
-    border-top: solid 8px #4aaaa5;
 }
 
+.card-text {
+    margin: 0 30px 15px 30px;
+}
 
-/* contact */
+.card-body {
+    overflow: auto;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Contact */
+/* ------------------------------------------------------------------------- */
 
 .btn-send {
     background-color: #4aaaa5;
     color: #ffffff;
+    margin-bottom: 50px;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Portfolio */
+/* ------------------------------------------------------------------------- */
 
-/* portfolio */
+.card,
+.cardImg {
+    margin-bottom: 25px;
+}
 
-.thumbnail
-.thumbnail-picture {
-    border: none;
+.card-body {
     padding: 0;
-    width: 300px;
 }
 
 h3 {
     position: absolute;
-    bottom: 50px;
+    bottom: 15px;
     width: 100%;
-    max-width: 300px;
     padding: 10px;
-    margin: 0 0 0 6px;
-    font-weight: 300;
     color: #fff;
     text-align: center;
     background: #4aaaa5;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Footer */
+/* ------------------------------------------------------------------------- */
+
+.footer {
+    background-color: #666666;
+    color: #cccccc;
+    text-align: center;
+    border-top: solid 8px #4aaaa5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Set the fixed height of the footer here */
+    line-height: 120px; /* Vertically center the text there */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Media Queries */
+/* ------------------------------------------------------------------------- */
+
+@media screen and (max-width: 320px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    #profilePic {
+        margin: 10px auto;
+    }
+
+    .card-text {
+        margin: 20px;
+    }
+
+    h3 {
+        padding: 5px;
+        font-size: 22px;
+    }
+
+    .btn-send {
+        margin: 20px 0;
+        width: 100%;
+    }
 }
